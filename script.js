@@ -1,7 +1,11 @@
-async function fetchRunes() {
-  const response = await fetch("https://api-mainnet.magiceden.dev/v2/ord/btc/runes/market/rune_info");
-  const data = await response.json();
-  return data;
+function fetchRunes() {
+  // MOCKED sample data
+  return Promise.resolve([
+    { ticker: "RUNE1", marketCapUSD: 1000000 },
+    { ticker: "RUNE2", marketCapUSD: 750000 },
+    { ticker: "RUNE3", marketCapUSD: 500000 },
+    { ticker: "RUNE4", marketCapUSD: 200000 }
+  ]);
 }
 
 function renderTreemap(runes) {
